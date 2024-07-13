@@ -1,4 +1,5 @@
 import streamlit as st
+GoogleAnalytics
 st.set_page_config(layout="wide")
 
 
@@ -19,6 +20,7 @@ st.markdown(
     f"""gtag('config', {GA});</script>"""
     , unsafe_allow_html=True)
 
+ main
 # Page info
 about_page = st.Page(
     title="About",
