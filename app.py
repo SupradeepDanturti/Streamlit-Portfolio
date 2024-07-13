@@ -1,4 +1,26 @@
 import streamlit as st
+GoogleAnalytics
+st.set_page_config(layout="wide")
+
+
+Tag = st.secrets["TAG_GA"]
+GA = st.secrets["GA_ID"]
+
+# GA Header
+st.markdown(
+    f"""
+        <!-- Google tag (gtag.js) -->
+        <script async src={Tag}></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];"""
+    """
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());"""
+
+    f"""gtag('config', {GA});</script>"""
+    , unsafe_allow_html=True)
+
+ main
 # Page info
 about_page = st.Page(
     title="About",
