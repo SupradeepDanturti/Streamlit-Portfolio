@@ -1,23 +1,4 @@
 import streamlit as st
-
-GATag = st.secrets["GATag"]
-GA = st.secrets["GA"]
-# GA Header
-st.markdown(
-    f"""
-        <!-- Google tag (gtag.js) -->
-        <script async src={GATag}></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];"""
-    """
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());"""
-
-    f"""gtag('config', {GA});"""
-    """
-        </script>
-    """, unsafe_allow_html=True)
-
 # Page info
 about_page = st.Page(
     title="About",
