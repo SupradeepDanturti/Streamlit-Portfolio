@@ -6,24 +6,26 @@ import streamlit.components.v1 as components
 st.set_page_config(layout="wide")
 
 # --GA Header--
-
-# Your Google Analytics tracking ID
 GA_TRACKING_ID = st.secrets["GA_ID"]
 
-# The HTML code with the Google Analytics tracking script
 GA_SCRIPT = f"""
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-
-gtag('config', '{GA_TRACKING_ID}');
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', '{GA_TRACKING_ID}');
+    </script>
+</head>
+<body>
+</body>
+</html>
 """
 
-# Display the Google Analytics tracking script
-components.html(GA_SCRIPT)
+components.html(GA_SCRIPT, height=0)
 
 
 # ---Contact Form---
