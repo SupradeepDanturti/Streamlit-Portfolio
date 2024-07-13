@@ -1,25 +1,29 @@
 import streamlit as st
 import time
 from forms.contact import contact_form
+import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
 
 # --GA Header--
-Tag = st.secrets["TAG_GA"]
-GA = st.secrets["GA_ID"]
 
-st.markdown(
-    f"""
-        <!-- Google tag (gtag.js) -->
-        <script async src={Tag}></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];"""
-    """
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());"""
+# Your Google Analytics tracking ID
+GA_TRACKING_ID = st.secrets["GA_ID"]
 
-    f"""gtag('config', {GA});</script>"""
-    , unsafe_allow_html=True)
+# The HTML code with the Google Analytics tracking script
+GA_SCRIPT = f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+
+gtag('config', '{GA_TRACKING_ID}');
+</script>
+"""
+
+# Display the Google Analytics tracking script
+components.html(GA_SCRIPT)
 
 
 # ---Contact Form---
