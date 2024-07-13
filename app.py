@@ -20,7 +20,6 @@ st.markdown(
     f"""gtag('config', {GA});</script>"""
     , unsafe_allow_html=True)
 
- main
 # Page info
 about_page = st.Page(
     title="About",
