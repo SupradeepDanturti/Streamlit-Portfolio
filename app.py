@@ -1,5 +1,4 @@
 import streamlit as st
-
 # Page info
 about_page = st.Page(
     title="About",
@@ -7,9 +6,19 @@ about_page = st.Page(
     icon="😊",
     default=True,
 )
-sample = st.Page(
-    title="sample",
-    page="pages/sample.py",
+Custom_Data_Visualizer = st.Page(
+    title="Custom Data Visualizer",
+    page="pages/customdatavisualizer/customdatavisualizer.py",
+)
+
+sftrees = st.Page(
+    title="San Francisco Trees",
+    page="pages/sftrees/sft.py",
+)
+
+HealthInsurance = st.Page(
+    title="Health Insurance",
+    page="pages/HealthInsuranceModel/HealthInsurance.py",
 )
 sample2 = st.Page(
     title="sample2",
@@ -23,7 +32,7 @@ sample2 = st.Page(
 navs = st.navigation(
     {
         "Info": [about_page],
-        "Projects": [sample, sample2],
+        "Projects": [Custom_Data_Visualizer, sftrees, HealthInsurance, sample2],
     }
 )
 navs.run()
