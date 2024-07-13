@@ -1,7 +1,6 @@
 import streamlit as st
 import time
 from forms.contact import contact_form
-import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
 
@@ -9,23 +8,23 @@ st.set_page_config(layout="wide")
 GA_TRACKING_ID = st.secrets["GA_ID"]
 
 GA_SCRIPT = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){{dataLayer.push(arguments);}}
-    gtag('js', new Date());
-    gtag('config', '{GA_TRACKING_ID}');
-    </script>
-</head>
-<body>
-</body>
-</html>
+<script>
+(function() {{
+    var ga = document.createElement('script'); 
+    ga.type = 'text/javascript'; 
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(ga, s);
+}})();
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+gtag('config', '{GA_TRACKING_ID}');
+</script>
 """
+st.markdown(GA_SCRIPT, unsafe_allow_html=True)
 
-components.html(GA_SCRIPT, height=0)
 
 
 # ---Contact Form---
