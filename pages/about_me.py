@@ -1,6 +1,24 @@
 import streamlit as st
 import time
 from forms.contact import contact_form
+st.set_page_config(layout="wide")
+
+# --GA Header--
+Tag = st.secrets["TAG_GA"]
+GA = st.secrets["GA_ID"]
+
+st.markdown(
+    f"""
+        <!-- Google tag (gtag.js) -->
+        <script async src={Tag}></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];"""
+    """
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());"""
+
+    f"""gtag('config', {GA});</script>"""
+    , unsafe_allow_html=True)
 
 
 # ---Contact Form---
