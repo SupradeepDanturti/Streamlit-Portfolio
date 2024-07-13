@@ -2,8 +2,6 @@ import streamlit as st
 import time
 from forms.contact import contact_form
 
-st.set_page_config(layout="wide")
-
 
 # ---Contact Form---
 @st.experimental_dialog("Contact Me")

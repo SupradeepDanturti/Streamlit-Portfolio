@@ -1,22 +1,23 @@
 import streamlit as st
+st.set_page_config(layout="wide")
 
-GATag = st.secrets["GATag"]
-GA = st.secrets["GA"]
+
+Tag = st.secrets["TAG_GA"]
+GA = st.secrets["GA_ID"]
+
 # GA Header
 st.markdown(
     f"""
         <!-- Google tag (gtag.js) -->
-        <script async src={GATag}></script>
+        <script async src={Tag}></script>
         <script>
           window.dataLayer = window.dataLayer || [];"""
     """
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());"""
 
-    f"""gtag('config', {GA});"""
-    """
-        </script>
-    """, unsafe_allow_html=True)
+    f"""gtag('config', {GA});</script>"""
+    , unsafe_allow_html=True)
 
 # Page info
 about_page = st.Page(
