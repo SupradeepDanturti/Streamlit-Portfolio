@@ -21,6 +21,14 @@ HealthInsurance = st.Page(
     title="Health Insurance",
     page="pages/HealthInsuranceModel/HealthInsurance.py",
 )
+Chatbot = st.Page(
+    title="Chatbot",
+    page="pages/Chatbot/Chatbot.py",
+)
+SpeakerCounter = st.Page(
+    title="SpeakerCounter",
+    page="pages/SpeakerCounter_dir/SpeakerCounter_main.py",
+)
 sample2 = st.Page(
     title="sample2",
     page="pages/sample2.py",
@@ -33,7 +41,7 @@ sample2 = st.Page(
 navs = st.navigation(
     {
         "Info": [about_page],
-        "Projects": [Custom_Data_Visualizer, sftrees, HealthInsurance, sample2],
+        "Projects": [SpeakerCounter, Chatbot, Custom_Data_Visualizer, sftrees, HealthInsurance, sample2],
     }
 )
 navs.run()
