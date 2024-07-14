@@ -3,7 +3,6 @@ import time
 import base64
 from SpeakerCounterInference.SpeakerCounter import SpeakerCounter
 
-# sys.path.append("pages/SpeakerCounter_dir/")
 st.title("Speaker Counter Inference")
 
 model_paths = {
