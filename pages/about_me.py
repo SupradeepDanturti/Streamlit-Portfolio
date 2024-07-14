@@ -26,7 +26,6 @@ gtag('config', '{GA_TRACKING_ID}');
 st.markdown(GA_SCRIPT, unsafe_allow_html=True)
 
 
-
 # ---Contact Form---
 @st.experimental_dialog("Contact Me")
 def contact():
@@ -127,8 +126,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 for education, date in education_info.items():
-    st.markdown(f"<div class='education-content'>{education}<div class='education-date'>{date}</div></div>", unsafe_allow_html=True)
-
+    st.markdown(f"<div class='education-content'>{education}<div class='education-date'>{date}</div></div>",
+                unsafe_allow_html=True)
 
 st.subheader("Experience", anchor=False)
 st.markdown(
@@ -170,17 +169,18 @@ mts_2 = """
     - Utilized this data-driven approach to assess candidates' qualifications and suitability for job.
     """
 
-
-
 # Displaying expanders with aligned dates
 with st.expander("Data Analyst Intern, GeoComply", expanded=True):
-    st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2023 - Aug 2023</div></div>", unsafe_allow_html=True)
+    st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2023 - Aug 2023</div></div>",
+                unsafe_allow_html=True)
     st.write(gc)
 
 with st.expander("Machine Learning Engineer, MotherSon Technology Services Jan 2022 - Aug 2022", expanded=True):
-    st.markdown("<div class='expander-content'><div></div><div class='expander-date'>Jan 2022 - Aug 2022</div></div>", unsafe_allow_html=True)
+    st.markdown("<div class='expander-content'><div></div><div class='expander-date'>Jan 2022 - Aug 2022</div></div>",
+                unsafe_allow_html=True)
     st.write(mts_1)
 
 with st.expander("Machine Learning Intern, MotherSon Technology Services May 2021 - Dec 2021", expanded=True):
-    st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2021 - Dec 2021</div></div>", unsafe_allow_html=True)
+    st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2021 - Dec 2021</div></div>",
+                unsafe_allow_html=True)
     st.write(mts_2)
