@@ -1,29 +1,10 @@
 import streamlit as st
 import time
 from forms.contact import contact_form
+from streamlit_extras.colored_header import colored_header
 
-st.set_page_config(layout="wide")
 
-# --GA Header--
-GA_TRACKING_ID = st.secrets["GA_ID"]
-
-GA_SCRIPT = f"""
-<script>
-(function() {{
-    var ga = document.createElement('script'); 
-    ga.type = 'text/javascript'; 
-    ga.async = true;
-    ga.src = 'https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}';
-    var s = document.getElementsByTagName('script')[0]; 
-    s.parentNode.insertBefore(ga, s);
-}})();
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-gtag('config', '{GA_TRACKING_ID}');
-</script>
-"""
-st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+st.set_page_config(layout="wide", page_title="Supradeep Danturti", page_icon="😊")
 
 
 # ---Contact Form---
@@ -39,8 +20,11 @@ with c1:
     st.image("./assets/profile_picture.png", width=300)
 
 with c2:
-    st.title("Hi! My name is Supradeep Danturti 👋🏼")
-    st.write("Data Scientist | AI Engineer")
+    colored_header(
+        label="Hi! My name is Supradeep Danturti 👋🏼",
+        description="Data Scientist | AI Engineer",
+        color_name="violet-70",
+    )
     st.markdown("<br>", unsafe_allow_html=True)
 
     social_icons_data = {
@@ -62,11 +46,9 @@ with c2:
     if st.button("📬 Contact Me"):
         contact()
 
-st.markdown("<hr style='width:100%;border:none;border-top:3px solid #eee;'>", unsafe_allow_html=True)
-
 # --- SKILLS ---
 st.write("\n")
-st.subheader("Hard Skills", anchor=False)
+colored_header(label="Skills", description="", color_name="violet-70")
 
 skill_col_size = 4
 
@@ -96,6 +78,7 @@ def skill_tab():
             except StopIteration:
                 break
 
+
 with st.spinner(text="Loading section..."):
     skill_tab()
 
@@ -105,7 +88,7 @@ education_info = {
     "Bachelor of Technology Computer Science, Centurion University of Technology and Management": "2022"
 }
 
-st.subheader("Education", anchor=False)
+colored_header(label="Education", description="", color_name="violet-70")
 st.markdown(
     """
     <style>
@@ -126,7 +109,7 @@ for education, date in education_info.items():
     st.markdown(f"<div class='education-content'>{education}<div class='education-date'>{date}</div></div>",
                 unsafe_allow_html=True)
 
-st.subheader("Experience", anchor=False)
+colored_header(label="Experience", description="", color_name="violet-70")
 st.markdown(
     """
     <style>
@@ -166,17 +149,51 @@ mts_2 = """
     - Utilized this data-driven approach to assess candidates' qualifications and suitability for job.
     """
 
-with st.expander("Data Analyst Intern, GeoComply", expanded=True):
+with st.expander("Data Analyst Intern, GeoComply", expanded=False):
     st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2023 - Aug 2023</div></div>",
                 unsafe_allow_html=True)
     st.write(gc)
 
-with st.expander("Machine Learning Engineer, MotherSon Technology Services Jan 2022 - Aug 2022", expanded=True):
+with st.expander("Machine Learning Engineer, MotherSon Technology Services Jan 2022 - Aug 2022", expanded=False):
     st.markdown("<div class='expander-content'><div></div><div class='expander-date'>Jan 2022 - Aug 2022</div></div>",
-                unsafe_allow_html=True)
+                unsafe_allow_html=False)
     st.write(mts_1)
 
-with st.expander("Machine Learning Intern, MotherSon Technology Services May 2021 - Dec 2021", expanded=True):
+with st.expander("Machine Learning Intern, MotherSon Technology Services May 2021 - Dec 2021", expanded=False):
     st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2021 - Dec 2021</div></div>",
-                unsafe_allow_html=True)
+                unsafe_allow_html=False)
     st.write(mts_2)
+
+colored_header(label="Projects", description="", color_name="violet-70")
+prj1, prj2, prj3 = st.columns([0.35, 0.30, 0.35], gap="small", vertical_alignment="bottom")
+
+image_urls = [
+    "assets/ConvAIProject.jpeg",
+    "assets/AgeClassification.png",
+    "https://example.com/image3.jpg"
+]
+
+titles = [
+    "Speaker Detection & Counter",
+    "Human Age Classification",
+    "Project 3"
+]
+
+with prj1:
+    st.image(image_urls[0], width=300)
+    st.page_link("projects/SpeakerCounter_dir/SpeakerCounter_main.py", label="Speaker Counter🔊🔢", use_container_width=True)
+with prj2:
+    st.image(image_urls[1], width=300)
+    st.page_link("https://github.com/SupradeepDanturti/COMP6721_Winter2023_GroupG", label="Age Classification Using CNNs", use_container_width=True)
+with prj3:
+    st.page_link("https://github.com/SupradeepDanturti/",
+                 label="Adding more projects... meanwhile checkout my github repo", use_container_width=True)
+
+
+hide_default_format = """
+       <style>
+       #MainMenu {visibility: hidden; }
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
