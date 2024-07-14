@@ -41,9 +41,8 @@ with c1:
 with c2:
     st.title("Hi! My name is Supradeep Danturti 👋🏼")
     st.write("Data Scientist | AI Engineer")
-    st.markdown("<br>", unsafe_allow_html=True)  # Adding a line break
+    st.markdown("<br>", unsafe_allow_html=True)
 
-    # Displaying social icons below the job title
     social_icons_data = {
         "LinkedIn": ["https://www.linkedin.com/in/supradeepdanturti",
                      "https://cdn-icons-png.flaticon.com/512/174/174857.png"],
@@ -69,7 +68,7 @@ st.markdown("<hr style='width:100%;border:none;border-top:3px solid #eee;'>", un
 st.write("\n")
 st.subheader("Hard Skills", anchor=False)
 
-skill_col_size = 4  # Example: Number of columns to display skills
+skill_col_size = 4
 
 info = {
     'skills': [
@@ -93,12 +92,10 @@ def skill_tab():
         for index_ in range(skill_col_size):
             try:
                 skill = next(skills)
-                columns[index_].button(skill, key=skill)  # Display skill as button
+                columns[index_].button(skill, key=skill)
             except StopIteration:
                 break
 
-
-# Display skills in columns using skill_tab function
 with st.spinner(text="Loading section..."):
     skill_tab()
 
@@ -169,7 +166,6 @@ mts_2 = """
     - Utilized this data-driven approach to assess candidates' qualifications and suitability for job.
     """
 
-# Displaying expanders with aligned dates
 with st.expander("Data Analyst Intern, GeoComply", expanded=True):
     st.markdown("<div class='expander-content'><div></div><div class='expander-date'>May 2023 - Aug 2023</div></div>",
                 unsafe_allow_html=True)
