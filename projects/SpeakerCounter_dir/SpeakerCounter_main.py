@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import base64
 from SpeakerCounterInference.SpeakerCounter import SpeakerCounter
 
 # sys.path.append("pages/SpeakerCounter_dir/")
@@ -9,6 +10,17 @@ model_paths = {
     "ECAPA-TDNN": "SpeakerCounterInference/ecapa_tdnn",
     "XVector": "SpeakerCounterInference/xvector"
 }
+
+
+def get_audio_file_download_link(file_path):
+    with open(file_path, 'rb') as f:
+        audio_bytes = f.read()
+    b64 = base64.b64encode(audio_bytes).decode()
+    href = f'<a href="data:audio/wav;base64,{b64}" download="sample_audio.wav">Download sample_audio.wav</a>'
+    return href
+
+
+st.markdown(get_audio_file_download_link("SpeakerCounterInference/sample_audio.wav"), unsafe_allow_html=True)
 
 selected_model = st.selectbox("Select Model", list(model_paths.keys()))
 

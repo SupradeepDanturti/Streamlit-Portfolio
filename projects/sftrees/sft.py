@@ -9,7 +9,7 @@ import altair as alt
 import pydeck as pdk
 
 st.title("SF Trees")
-trees_df = pd.read_csv("pages/sftrees/trees.csv")
+trees_df = pd.read_csv("projects/sftrees/trees.csv")
 st.write(trees_df.head())
 # ---Built in Graphing Functions---
 
