@@ -8,7 +8,7 @@ st.set_page_config(layout="wide", page_title="Supradeep Danturti", page_icon="ðŸ
 
 
 # ---Contact Form---
-@st.experimental_dialog("Contact Me")
+@st.dialog("Contact Me")
 def contact():
     contact_form()
 

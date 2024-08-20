@@ -17,10 +17,6 @@ sftrees = st.Page(
     page="projects/sftrees/sft.py",
 )
 
-HealthInsurance = st.Page(
-    title="Health Insurance",
-    page="projects/HealthInsuranceModel/HealthInsurance.py",
-)
 Chatbot = st.Page(
     title="Chatbot",
     page="projects/Chatbot/Chatbot.py",
@@ -29,19 +25,13 @@ SpeakerCounter = st.Page(
     title="SpeakerCounter",
     page="projects/SpeakerCounter_dir/SpeakerCounter_main.py",
 )
-sample2 = st.Page(
-    title="sample2",
-    page="projects/sample2.py",
-)
 
 # Page Navs
-#
-# navs = st.navigation(projects=[about_page])
 
 navs = st.navigation(
     {
         "Info": [about_page],
-        "Projects": [SpeakerCounter, Chatbot, Custom_Data_Visualizer, sftrees, HealthInsurance, sample2],
+        "Projects": [Chatbot, SpeakerCounter, Custom_Data_Visualizer, sftrees],
     }
 )
 navs.run()

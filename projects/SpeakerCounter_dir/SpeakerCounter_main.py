@@ -4,7 +4,6 @@ import base64
 from SpeakerCounterInference.SpeakerCounter import SpeakerCounter
 from streamlit_extras.colored_header import colored_header
 
-
 colored_header(label="Speaker Counter Inference", description="", color_name="violet-70")
 st.markdown("""
 <div style="text-align: justify;">
@@ -21,8 +20,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-
-
 model_paths = {
     "ECAPA-TDNN": "SpeakerCounterInference/ecapa_tdnn",
     "XVector": "SpeakerCounterInference/xvector"
@@ -35,6 +32,7 @@ def get_audio_file_download_link(file_path):
     b64 = base64.b64encode(audio_bytes).decode()
     href = f'<a href="data:audio/wav;base64,{b64}" download="sample_audio.wav">Download sample_audio.wav</a>'
     return href
+
 
 st.markdown(
     """

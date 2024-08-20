@@ -1,0 +1,57 @@
+Supradeep Danturti
+Toronto, ON (Open to Relocate) | 5148344472 | supradeep.danturti@gmail.com | https://www.linkedin.com/in/supradeepdanturti/ | https://supradeep.streamlit.app/
+WORK EXPERIENCE
+GeoComply
+Toronto, ON
+Data Analyst Intern
+May 2023 - Aug 2023
+• Engineered a complex data visualization dashboard for cybersecurity and fraud prevention projects using Grafana, Kibana, and Python to monitor millions of daily transactions, resulting in a 20% decrease in deployment errors.
+• Developed and implemented a forecasting algorithm with 92% accuracy using deep learning techniques such as RNNs and LSTM networks to predict future trends for strategic decision-making purposes, and used Apache Kafka + ELK Stack to handle real-time data streams
+• Automated document creation processes with SQL and Python, streamlining daily monitoring procedures and improving productivity by 15% while reducing manual labor by 30%
+• Utilized Python scripts to automate ETL processes, resulting in a 50% reduction in manual data processing time and increased daily data monitoring efficiency by 60%.
+Motherson Technology Services
+Noida, UP
+Machine Learning Engineer
+Jan 2022 - Aug 2022
+• Developed a machine learning algorithm using Python and Node.js to analyze employee attendance data in real-time, resulting in a 20% increase in accuracy compared to manual tracking methods.
+• Proposed data-efficient techniques: data augmentation, transfer learning, and knowledge distillation to design and implement a face recognition model using deep learning algorithms (CNNs) with TensorFlow, Keras and other Deep Learning techniques. Achieved a 20% increase in model efficiency compared to previous iterations.
+• Utilized Docker for containerization, ensuring consistency across development and production environments, and implemented CI/CD pipelines for automated model deployment. Used Postman for API testing and validation
+• Collaborated with other business units to develop an Automatic License Plate Recognition (ALPR) system to enhance security measures and streamline regulatory compliance by leveraging Python, OpenCV, Pytorch, and YOLO for license plate detection and character recognition, ensuring high accuracy and real-time performance
+• Developed a machine learning algorithm using Python and Node.js to analyze employee attendance data in real-time, resulting in a 20% increase in accuracy compared to manual tracking methods.
+Motherson Technology Services
+Noida, UP
+Machine Learning Engineer Intern
+May 2021 - Dec 2021
+• Developed a Synergizing prototype capable of analyzing candidate videos to extract crucial information, including facial expressions, body language, and speech patterns by data preprocessing using Python, OpenCV, and Pytorch.
+• Utilized this data-driven approach to assess candidates' qualifications and suitability for job roles effectively by implementing neural networks and natural language processing techniques.
+• Leveraged Docker for containerization to ensure consistency across development and production environments and utilized Kubernetes for managing deployment. Implemented CI/CD pipelines for automated testing and deployment, ensuring efficient and reliable updates.
+EDUCATION
+Concordia University
+Montreal, QC
+Master of Applied Computer Science
+May 2024
+Centurion University of Technology & Management
+Bachelor of Technology: Computer Science & Engineering
+Vizianagaram, AP
+May 2022
+SKILLS
+Python, SQL, Machine Learning, Pandas, Numpy, Plotly, Scikit-learn, Deep Learning, Pytorch, CI/CD Pipelines, Computer Vision, NLP, Transformers, OpenCV, SpeechBrain, TensorFlow, Keras, GenAI, CUDA, Kibana, Grafana, Streamlit, Postman, Elasticsearch, ELK Stack, Docker
+PROJECTS
+Deep Learning from Limited Data: Few-Sample Learning on CIFAR-10
+• Developed and implemented an image classification system using advanced machine learning models including Support Vector Machines (SVM) with Histogram of Oriented Gradients (HOG) features, Convolutional Neural Networks (CNN), and Vision Transformers (ViT) to classify images from the CIFAR-10 dataset with only 50 samples, achieving significant accuracy.
+• Conducted a comprehensive comparative analysis of the performance of SVM, CNN, and ViT models under data-constrained conditions, demonstrating the effectiveness of fine-tuning pre-trained EfficientNetV2 models and utilizing advanced image augmentation techniques.
+• Successfully applied data-efficient techniques such as data augmentation, transfer learning, and knowledge distillation using teacher-student models to mitigate overfitting, resulting in a peak accuracy of 78.95% with optimized CNN models, showcasing strong expertise in handling limited data scenarios and enhancing model performance.
+Age Classification Using Convolutional Neural Networks
+• Developed and implemented an automated human age classification (HAC) system using ResNet18, MobileNetV2, and ShuffleNetV2 deep CNN models, achieving improved accuracy in facial age recognition.
+• Conducted comparative analysis on diverse datasets, providing valuable insights for model selection and optimization. Proficiently utilized Pytorch to implement and fine-tune deep CNN models, showcasing strong programming skills in AI applications.
+ElasticSearch and Kubernetes
+• Orchestrated a project to deploy Elasticsearch on a Kubernetes cluster and seamlessly integrated it with other tools. Utilized Kubernetes resources, including pods, services, and deployments, to establish a robust Elasticsearch cluster.
+• Implemented Kubernetes Operator for Elasticsearch to streamline cluster management and optimize performance. Seamlessly integrated Kibana for data visualization and streamlined querying of the Elasticsearch cluster.
+Gastrointestinal Cancer MSI-MSS
+• Developed a cutting-edge deep learning model to predict two types of gastrointestinal cancer images (MSI-MSS). Utilized state-of-the-art techniques and deep learning algorithms like CNN, Resnet50, and VGG-16 for image analysis.
+• Leveraged the model to accurately classify gastrointestinal cancer samples as MSI or MSS types, enhancing medical diagnosis.
+CERTIFICATIONS
+• Oracle Generative AI Professional 2024
+• Applied Data Science - Hitachi Vantara
+• Microsoft Certified: Azure Fundamentals
+• Certificate of Appreciation, Motherson Sumi Infotech and Design Ltd. (MIND)
