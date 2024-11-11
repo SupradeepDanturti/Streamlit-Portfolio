@@ -46,7 +46,8 @@ with c2:
     if st.button("📬 Contact Me"):
         contact()
         
-# --- SUMMARY ---        
+# --- SUMMARY ---    
+st.subheader("About Me 🌟", anchor=False)
 st.markdown("""
     <hr style="margin-top: 1px; margin-bottom: 10px; border: 1px solid #ccc;">
 """, unsafe_allow_html=True)
@@ -63,40 +64,51 @@ st.markdown("""
 st.write("\n")
 
 # --- SKILLS ---
-st.write("\n")
-colored_header(label="Skills", description="", color_name="violet-70")
+st.subheader("Skills", anchor=False)
+st.markdown("""
+    <hr style="margin-top: 1px; margin-bottom: 10px; border: 1px solid #ccc;">
+""", unsafe_allow_html=True)
+st.write("""
+- **Programming Languages:** Python, SQL, JavaScript 
+- **Machine Learning & AI:** PyTorch, Hugging Face, Deep Learning, Transformers, LLM Fine Tuning, Keras, TensorFlow, Scikit-learn, SpeechBrain, MLFlow, OpenCV, CNNs, Transfer Learning, CUDA, Vision Transformers, Few-Shot Learning, NLP
+- **Data Visualization & Analysis:** Tableau, Power BI, R-Studio, Grafana, Kibana, Matplotlib, Seaborn, Plotly, Pandas, Numpy, Jupyter Notebook
+- **Big Data & Databases:** SQL, NoSQL (Couchbase, ElasticSearch, MongoDB)
+- **Cloud & DevOps:** Azure AI, AWS (Sagemaker), GCP, Oracle Cloud (OCI), Docker, Kubernetes, CI/CD, gRPC, Git, Flask, Streamlit
+""")
+# st.write("\n")
+# colored_header(label="Skills", description="", color_name="violet-70")
 
-skill_col_size = 4
+# skill_col_size = 4
 
-info = {
-    'skills': [
-        "Python", "SQL", "Jupyter", "Numpy", "Pandas", "OpenCV", "Scikit-learn",
-        "Pytorch", "Tensorflow", "Machine Learning", "Deep Learning",
-        "ElasticSearch", "Kubernetes", "Docker", "Grafana", "Kibana", "Plotly",
-        "Streamlit", "SpeechBrain"
-    ]
-}
-
-
-def skill_tab():
-    rows = len(info['skills']) // skill_col_size
-    if len(info['skills']) % skill_col_size != 0:
-        rows += 1
-
-    skills = iter(info['skills'])
-
-    for x in range(rows):
-        columns = st.columns(skill_col_size)
-        for index_ in range(skill_col_size):
-            try:
-                skill = next(skills)
-                columns[index_].button(skill, key=skill)
-            except StopIteration:
-                break
+# info = {
+#     'skills': [
+#         "Python", "SQL", "Jupyter", "Numpy", "Pandas", "OpenCV", "Scikit-learn",
+#         "Pytorch", "Tensorflow", "Machine Learning", "Deep Learning",
+#         "ElasticSearch", "Kubernetes", "Docker", "Grafana", "Kibana", "Plotly",
+#         "Streamlit", "SpeechBrain"
+#     ]
+# }
 
 
-with st.spinner(text="Loading section..."):
-    skill_tab()
+# def skill_tab():
+#     rows = len(info['skills']) // skill_col_size
+#     if len(info['skills']) % skill_col_size != 0:
+#         rows += 1
+
+#     skills = iter(info['skills'])
+
+#     for x in range(rows):
+#         columns = st.columns(skill_col_size)
+#         for index_ in range(skill_col_size):
+#             try:
+#                 skill = next(skills)
+#                 columns[index_].button(skill, key=skill)
+#             except StopIteration:
+#                 break
+
+
+# with st.spinner(text="Loading section..."):
+#     skill_tab()
 
 # --- Education & Experience ---
 education_info = {
